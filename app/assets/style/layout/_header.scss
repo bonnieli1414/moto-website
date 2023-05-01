@@ -1,0 +1,61 @@
+header {
+    border-bottom: 1px solid #fff;
+    height: 62px;
+
+    .logo {
+        padding-top: 12px;
+        padding-bottom: 12px;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    // 響應式設置：手機或pad版時引入ham-menu
+    nav {
+        @include navHover;
+
+        @include pad {
+            @include ham-menu;
+        }
+
+        img {
+            object-fit: contain;
+
+        }
+
+        .hover-line {
+            @include hover-underline;
+        }
+    }
+
+    .offcanvas-right {
+        a:hover {
+            width: 100%;
+            @include hover-underline;
+        }
+
+        .offcanvas-hover-line {
+            @include hover-underline;
+
+            .hover-underline::after {
+                margin-left: 0px;
+            }
+        }
+    }
+
+    .offcanvas-overflow-style {
+        overflow-y: scroll;
+    }
+
+    .material-symbols-outlined {
+        line-height: 30px;
+        vertical-align: middle;
+    }
+
+    h1 {
+        @include visual-hidden;
+    }
+
+    @include scroll-style;
+}

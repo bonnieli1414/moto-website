@@ -1,0 +1,6 @@
+.store {
+    .hero {
+        height: 400px;
+        @include banner("../../assets/images/store/store07.jpg")
+    }
+}

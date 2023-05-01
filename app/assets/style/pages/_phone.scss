@@ -1,0 +1,15 @@
+.phone {
+    .hero {
+        height: 500px;
+        @include banner("../../assets/images/phone/hero_all.jpg")
+    }
+    .container {
+        @include cardHeightIsSame;
+    }
+    .allPhone {
+        a:hover {
+            color: $theme101-color;
+            background-color: #fff;
+        }
+    }
+}

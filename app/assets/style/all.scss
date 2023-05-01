@@ -1,0 +1,23 @@
+// node_modules
+// bootstrap客製化，有相依和順序性，引入順序不能變更
+// 參考文件https://getbootstrap.com/docs/5.0/customize/sass/#variable-defaults
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "./config/j_bs_custom"; //修改bs的Variables文件資料
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// configuration
+@import "./config/j_variables";
+@import "./config/j_base";
+@import "./config/j_mixins";
+
+// 全站設定
+@import "./layout/root";
+@import "./layout/header";
+@import "./layout/footer";
+
+// Pages
+@import "./pages/index";
+@import "./pages/phone";
+@import "./pages/store";
+@import "./pages/support";
+@import "./pages/member";

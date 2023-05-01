@@ -1,0 +1,76 @@
+---
+title: Motorola手機 | 台灣
+layout: ./app/layout.ejs
+engine: ejs
+current: phone
+---
+<div class="phone phone_edge text-light">
+    <!-- Hero Image 開始  -->
+    <section class="hero d-flex flex-column justify-content-center">
+        <div class="container text-end">
+            <h2 class="p-3" data-aos="flip-left">令人難以置信的 5G 速度</h2>
+                <h5 class="p-3" data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom" data-aos-duration="2000">
+                    <p class="py-1">透過令人難以置信的 5G 速度，實現更多以往不可能達成的任務。</p>
+                    <p class="py-1">下載您最愛的節目，只要幾秒就能完成⁷。</p>
+                    <p class="py-1">串流速度之快，幾乎沒有緩衝。</p>
+                    <p class="py-1">視訊交談不再延遲，就像親臨現場一樣。</p>
+                </h5>
+        </div>
+    </section>
+    <!-- Hero Image 結束  -->
+
+    <!-- 系列機款分類選單開始 -->
+    <section class="section-top bg-theme101-color">
+        <div class="swiper renderSwiper">
+            <ul class="swiper-wrapper ps-3 py-3 mx-auto gap-2">
+                <li class="swiper-slide" style="width: 150px;">
+                    <a class="text-center" href="#" data-series='edge'>
+                        <img src="./assets/images/phone/all/edge.webp" alt="motorola edge 系列" style="height: 150px;" data-series='edge'>
+                        <p data-series='edge'>motorola edge 系列</p>
+                    </a>
+                </li>
+                <li class="swiper-slide" style="width: 150px;">
+                    <a class="text-center" href="#" data-series='razr'>
+                        <img src="./assets/images/phone/all/zazr.webp" alt="razr" style="height: 150px;" data-series='razr'>
+                        <p data-series='razr'>razr</p>
+                    </a>
+                </li>
+                <li class="swiper-slide" style="width: 150px;">
+                    <a class="text-center" href="#" data-series='one'>
+                        <img src="./assets/images/phone/all/one.webp" alt="motorola one 系列" style="height: 150px;" data-series='one'>
+                        <p data-series='one'>motorola one 系列</p>
+                    </a>
+                </li>
+                <li class="swiper-slide" style="width: 150px;">
+                    <a class="text-center" href="#" data-series='e'>
+                        <img src="./assets/images/phone/all/e.webp" alt="moto e 系列" style="height: 150px;" data-series='e'>
+                        <p data-series='e'>moto e 系列</p>
+                    </a>
+                </li>
+                <li class="swiper-slide" style="width: 150px;">
+                    <a class="text-center" href="#" data-series='g'>
+                        <img src="./assets/images/phone/all/g.webp" alt="moto g 系列" style="height: 150px;" data-series='g'>
+                        <p data-series='g'>moto g 系列</p>
+                    </a>
+                </li>
+                <li class="swiper-slide" style="width: 250px; padding-right: 100px;">
+                    <a class="text-center" href="#" data-series='all'>
+                        <img src="./assets/images/phone/all/all.webp" alt="全部機型" style="height: 150px;" data-series='all'>
+                        <p data-series='all'>全部機型</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 系列機款分類選單結束 -->
+
+    <!-- 機型畫面開始 -->
+    <section class="section-bottom bg-theme101-color text-dark">
+        <div class="container d-flex py-5">
+            <div class="allPhone card-container">
+            </div>
+        </div>
+    </section>
+    <!-- 機型畫面結束 -->
+</div>

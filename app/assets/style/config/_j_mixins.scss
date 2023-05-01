@@ -1,0 +1,276 @@
+// 客製RWD:平板尺寸
+@mixin pad {
+    @media screen and (max-width: $desktop-width) {
+        @content;
+    }
+}
+
+// 客製RWD:手機尺寸
+@mixin mobile {
+    @media screen and (max-width: $pad-width) {
+        @content;
+    }
+}
+
+// 客製RWD:手機尺寸
+@mixin mobile-sm {
+    @media screen and (max-width: $pad-width) {
+        @content;
+    }
+}
+
+// 客製漢堡選單
+@mixin ham-menu {
+
+    // 先製作 ham-menu 作相對定位
+    .ham-menu {
+        width: 48px;
+        height: 48px;
+        display: block;
+        position: relative;
+    }
+
+    // 製作 ham-menu 外框作絕對定位
+    .ham-frame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    // 製作 ham-menu 三根技巧
+    .ham-bar {
+        height: 2px;
+        width: 26px;
+        background-color: var(--bs-light);
+        position: absolute;
+        transition: all 0.3s;
+    }
+
+    .ham-bar--top {
+        transform: translateY(-6px);
+    }
+
+    .ham-bar--bottom {
+        transform: translateY(6px);
+    }
+
+    // 製作 ham-menu checked後圖形變成打叉圖示
+    .ham-toggle:checked~.ham-menu .ham-frame .ham-bar--middle {
+        opacity: 0;
+    }
+
+    .ham-toggle:checked~.ham-menu .ham-frame .ham-bar--top {
+        transform: rotate(-45deg);
+    }
+
+    .ham-toggle:checked~.ham-menu .ham-frame .ham-bar--bottom {
+        transform: rotate(45deg);
+    }
+
+    // 客製側邊欄(右邊)
+    .offcanvas-right {
+        color: #fff;
+        background-color: #020912e6;
+        position: fixed;
+        top: 62px;
+        bottom: 0;
+        left: 0;
+        transition: margin-left 0.5s;
+        margin-left: -120vh;
+
+        a {
+            width: 100vh;
+        }
+    }
+
+    .ham-toggle:checked~.offcanvas-right {
+        margin-left: 0px;
+    }
+}
+
+// 針對h1標籤為圖片，設置隱藏文字，優化圖片SEO
+@mixin visual-hidden {
+    position: absolute;
+    // 首行縮排設滿
+    text-indent: 100%;
+    // 不換行
+    white-space: nowrap;
+    // 超過後隱藏
+    overflow: hidden;
+}
+
+// 圖片設定為背景當banner用途
+@mixin banner($imgUrl) {
+    background-image: url($imgUrl);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// 背景固定的視差效果
+@mixin bg-fixd {
+    background-attachment: fixed;
+}
+
+// hover後圖片放大的視差效果
+@mixin hover-imgChangeBig {
+    .card-frame {
+        overflow: hidden;
+    }
+
+    .card-img-top {
+        transition: transform ease-out 0.5s;
+    }
+
+    .card-img-top:hover {
+        transform: scale(1.2);
+    }
+}
+
+// hover後背景變亮的視差效果
+@mixin hover-bg-light {
+    background-color: #1c1c1cb3;
+
+    &:hover {
+        background-color: #1c1c1c00;
+    }
+
+    a:hover {
+        color: #fff;
+    }
+}
+
+// 卡片高度相同設定
+@mixin cardHeightIsSame {
+    .card-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+        // 子元素寬度各佔33.33%
+        // - 20px產生gap:10px
+        flex-basis: calc(33.33% - 20px);
+        // flex-grow: 1; //此設定是讓寬度可以自適應寬度瑱滿
+
+        @include pad {
+            flex-basis: calc(50% - 20px);
+        }
+
+        @include mobile {
+            flex-basis: calc(100% - 20px);
+        }
+    }
+}
+
+// nav hover後滿版顯示效果
+@mixin navHover {
+    .list-child {
+        display: none;
+    }
+
+    header .container {
+        position: relative;
+    }
+
+    .list-parent:hover .list-child {
+        display: flex;
+        flex-wrap: nowrap;
+        position: absolute;
+        left: 0;
+        padding: 10px;
+        width: 100%;
+        // height: 100vh;
+        background-color: #020912e6;
+        color: #fff;
+
+        li {
+            padding: 15px;
+            width: 13%;
+        }
+
+        img {
+            height: 150px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+// hover 底線客製化
+@mixin hover-underline {
+    .hover-underline {
+        height: 62px;
+    }
+
+    .hover-underline::after {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 2px;
+        background-color: #397ff9;
+        margin: 0px auto; //此項也決定動畫方向
+        margin-top: 5px;
+        transition: width .3s;
+    }
+
+    .hover-underline:hover::after {
+        width: 90%;
+    }
+}
+
+// scroll樣式客製
+@mixin scroll-style {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: $theme102-color;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/*
+**搭配js檔案的轉場時間
+*/
+
+.js-scaleBig,
+.js-scaleSmall {
+    transition: transform ease-in-out 0.5s;
+}
+
+.js-fadeIn {
+    transition: opacity ease-out 0.1s;
+}
+
+.js-upPosition {
+    transition: transform ease-out 1s;
+}
+
+.js-rotate {
+    transition: ease-out 0.3s;
+    transform: rotate(90deg);
+}
+
+// swiper套件
+.swiper {
+    width: 960px;
+    @include pad {
+        width: 720px;
+    }
+    @include mobile {
+        width: 100%;
+    }
+}

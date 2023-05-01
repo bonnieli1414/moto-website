@@ -1,0 +1,14 @@
+.member {
+    .banner {
+        padding: 100px 0px;
+        @include banner("../../assets/images/member/hero.jpeg")
+    }
+    .btn:hover{
+        color: #fff;
+        background-color: $theme101-color;
+        border: 1px solid $theme101-color;
+    }
+    form {
+        background-color: #0b1e32cc;
+    }
+}

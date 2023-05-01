@@ -1,0 +1,45 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+.bg-theme101-color {
+    background-color: $theme101-color;
+}
+.bg-theme102-color {
+    background-color: $theme102-color;
+}
+.hover-bg-theme101-color:hover {
+    background-color: $theme101-color;
+}
+.hover-.bg-theme102-color:hover {
+    background-color: $theme102-color;
+}
+.hover-bg-light {
+    @include hover-bg-light;
+}
+.mb--7 {
+    margin-bottom: -7px;
+}
+.px-0 {
+    padding: 0px;
+}
+.underline {
+    border-bottom: solid 2px #397ff9;
+    padding-bottom: 1px;
+}
+.table,tr,td {
+    border: 1px solid #fff;
+    padding: 4px;
+}
+.w-lg-50 {
+    width: 60%;
+    @include pad {
+        width: 80%;
+    }
+}
+.shadow-c {
+    box-shadow: 4px 8px 8px #00516d;
+}

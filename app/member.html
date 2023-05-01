@@ -1,0 +1,30 @@
+---
+title: Motorola會員 | 台灣
+layout: ./app/layout.ejs
+engine: ejs
+current: member
+---
+<div class="member text-light">
+    <main class="banner">
+        <div class="container py-5">
+            <!-- 會員登入頁面開始 -->
+            
+            <form class="bg-theme101-color d-flex flex-column w-lg-50 mx-auto p-5">
+                <h2 class="text-center">會員登入</h2>
+                <div class="mb-3">
+                    <label for="inputEmail1" class="form-label">帳號</label>
+                    <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="請輸入電子郵件">
+                </div>
+                <div class="mb-3">
+                    <label for="inputPassword" class="form-label">密碼</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="請輸入密碼">
+                </div>
+                <div class="text-center mb-3">
+                    <button type="submit" class="btn btn-light link">&nbsp;登入&nbsp;</button>
+                </div>
+            </form>
+            <!-- 會員登入頁面結束 -->
+            <p class="text-center py-3">沒有帳戶嗎? <a href="signup.html" style="display: inline;">&nbsp;建立一個吧!</a></p>
+        </div>
+    </main>
+</div>

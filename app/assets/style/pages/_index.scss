@@ -1,0 +1,43 @@
+.index {
+    .section-top {
+        .card {
+            @include hover-imgChangeBig;
+        }
+    }
+
+    .section-middle-bottom {
+        .banner-1 {
+            height: 400px;
+            @include banner("../../assets/images/index/banner01.webp");
+        }
+        .banner-2 {
+            height: 400px;
+            @include banner("../../assets/images/index/banner02.webp");
+        }
+        .banner-3 {
+            height: 400px;
+            @include banner("../../assets/images/index/banner03.webp");
+        }
+        .banner-4 {
+            height: 400px;
+            @include banner("../../assets/images/index/banner04.webp");
+        }
+        .banner-5 {
+            height: 400px;
+            @include banner("../../assets/images/index/banner05.webp");
+        }
+        .banner-6 {
+            height: 400px;
+            @include banner("../../assets/images/index/banner06.webp");
+        }
+    }
+
+    .section-bottom {
+        .index-banner {
+            width: 100%;
+            height: 600px;
+            @include banner("../../assets/images/index/Motorola-edge-30-pdp-Design-Water-Protection-Desktop-7mlhjiik.jpg");
+            @include bg-fixd;
+        }
+    }
+}
