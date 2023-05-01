@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Motorola首頁 | 台灣</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.ico">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <!-- header開始 -->
+  <header class="header fixed-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html"><img width="136px" class="logo" src="./assets/images/Motorola_Logo_White.png" alt="Motorola"
+          title="Motorola">
+        <h1 class="visual-hidden">motorola</h1>
+      </a>
+      <nav class="text-light d-flex">
+        <ul class="d-none d-lg-flex fs-5">
+          <li class="list-parent hover-line"><a class="hover-underline px-2 py-3" href="#">手機</a>
+            <ul class="list-child">
+              <li class="text-center"><a href="phone_edge.html" data-series='edge'>
+                  <img src="./assets/images/nav/edge.webp" alt="motorola edge 系列" data-series='edge'>
+                  <hr>
+                  <p data-series='edge'>motorola edge 系列</p>
+                </a></li>
+              <li class="text-center"><a href="phone_razr.html" data-series='razr'>
+                  <img src="./assets/images/nav/razr.webp" alt="razr" data-series='razr'>
+                  <hr>
+                  <p data-series='razr'>razr</p>
+                </a></li>
+              <li class="text-center"><a href="phone_one.html" data-series='one'>
+                  <img src="./assets/images/nav/one.webp" alt="motorola one 系列" data-series='one'>
+                  <hr>
+                  <p data-series='one'>motorola one 系列</p>
+                </a></li>
+              <li class="text-center"><a href="phone_moto_e.html" data-series='e'>
+                  <img src="./assets/images/nav/e.webp" alt="moto e 系列" data-series='e'>
+                  <hr>
+                  <p data-series='e'>moto e 系列</p>
+                </a></li>
+              <li class="text-center"><a href="phone_moto_g.html" data-series='g'>
+                  <img src="./assets/images/nav/g.webp" alt="moto g 系列" data-series='g'>
+                  <hr>
+                  <p data-series='g'>moto g 系列</p>
+                </a></li>
+              <li class="text-center"><a href="phone_all.html" data-series='all'>
+                  <img src="./assets/images/nav/all.webp" data-series='all'>
+                  <hr>
+                  <p data-series='all'>全部機型</p>
+                </a></li>
+            </ul>
+          </li>
+          <li class="list-parent hover-line"><a class="hover-underline px-2 py-3" href="store.html">服務據點</a>
+          </li>
+          <li class="list-parent hover-line"><a class="hover-underline px-2 py-3" href="support.html">支援服務</a>
+          </li>
+          <li class="list-parent hover-line"><a class="hover-underline px-2 py-3" href="./member.html"><span class="material-symbols-outlined">
+            person_add
+            </span>會員</a>
+          </li>
+        </ul>
+        <input id="nav-toggle" class="ham-toggle d-none" type="checkbox">
+        <label for="nav-toggle" class="ham-menu">
+          <div class="ham-frame">
+            <div class="ham-bar ham-bar--top"></div>
+            <div class="ham-bar ham-bar--middle"></div>
+            <div class="ham-bar ham-bar--bottom"></div>
+          </div>
+        </label>
+        <!-- 側邊欄開始 -->
+        <div class="offcanvas-right d-lg-none offcanvas-overflow-style">
+          <ul class="fs-5">
+            <li class="offcanvas-hover-line" data-series='edge'>
+              <a class="hover-underline offcanvas-parent  px-4 py-3" href="#" data-series='edge'>
+                <span class="material-symbols-outlined phone_android" data-series='edge'>
+                  phone_android
+                </span>&nbsp;手機
+                <span class="material-symbols-outlined chevron_right" data-series='edge'>
+                  chevron_right
+                </span>
+              </a>
+              <ul class="offcanvas-right-child d-none">
+                <li><a class="p-1" style="text-indent: 2rem;" href="phone_edge.html">motorola edge 系列</a></li>
+                <li><a class="p-1" style="text-indent: 2rem;" href="phone_one.html">motorola one 系列</a></li>
+                <li><a class="p-1" style="text-indent: 2rem;" href="phone_moto_e.html">moto e 系列</a></li>
+                <li><a class="p-1" style="text-indent: 2rem;" href="phone_moto_g.html">moto g 系列</a></li>
+                <li><a class="p-1" style="text-indent: 2rem;" href="phone_all.html">全部機型</a></li>
+              </ul>
+            </li>
+            <li class="offcanvas-hover-line"><a class="hover-underline px-4 py-3" href="store.html"><span class="material-symbols-outlined">
+              storefront
+              </span>&nbsp;服務據點</a></li>
+            <li class="offcanvas-hover-line"><a class="hover-underline px-4 py-3" href="support.html"><span class="material-symbols-outlined">
+              headphones
+              </span>&nbsp;支援服務</a></li>
+            <li class="offcanvas-hover-line"><a class="hover-underline px-4 py-3" href="member.html"><span class="material-symbols-outlined">
+              person
+              </span>&nbsp;會員</a></li>
+          </ul>
+        </div>
+        <!-- 側邊欄結束 -->
+      </nav>
+    </div>
+  </header>
+  <!-- header結束 -->
+
+  <div class="index text-light">
+    <!-- Hero Image(影片) 開始  -->
+    <section class="hero mb--7">
+        <video width="100%" height="100%" autoplay muted loop id="myVideo">
+            <source src="./assets/images/index/5G.mp4" type="video/mp4">
+        </video>
+    </section>
+    <!-- Hero Image(影片) 結束  -->
+
+    <!-- 主打商品特色說明 card 開始 -->
+    <section class="section-top bg-primary py-5">
+        <div class="container py-4">
+            <h2 class="py-4" data-aos="fade-down" data-aos-anchor-placement="center-center">
+                添加可調節的背景模糊處理，創造出迷人的專業人像。</h2>
+            <h4 class="ps-5 py-4" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="500">
+                任何光線下都能捕捉到清晰銳利的影像。無論是近拍、超廣角或絕美的自拍照 – <strong>motorola edge 30</strong> 永遠為您呈現最棒的拍攝效果。</h4>
+            <div class="card-group gap-2 mt-5" style="margin-top: 30px;">
+                <div class="card js-fadeIn js-upPosition bg-theme101-color">
+                    <div class="card-frame">
+                        <img class="card-img-top"
+                            src="./assets/images/index/Motorola-edge-30-Masonry-Grid-Omni-directional-d-2-67k8lw3t.jpg"
+                            alt="影像品質再提升" style="height: 200px;">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="text-center">影像品質再提升</h2>
+                        <p class="card-text my-3">運用先進的高畫質瞬間對焦技術，享受對焦更快、更準確的體驗。</p>
+                    </div>
+                </div>
+                <div class="card js-fadeIn js-upPosition bg-theme101-color">
+                    <div class="card-frame">
+                        <img class="card-img-top"
+                            src="./assets/images/index/Motorola-edge-30-Masonry-Grid-Macro-d-6-y0qi52ah.jpg" alt="拉近距離"
+                            style="height: 200px;">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="text-center">拉近距離</h2>
+                        <p class="card-text my-2">利用 5000 萬像素微距鏡頭 (Macro Vision) 拉近距離拍攝您的對象 – 呈現標準鏡頭無法捕捉到的細節。</p>
+                    </div>
+                </div>
+                <div class="card js-fadeIn js-upPosition bg-theme101-color">
+                    <div class="card-frame">
+                        <img class="card-img-top"
+                            src="./assets/images/index/Motorola-edge-30-Masonry-Grid-OIS-d-5-8ga6mqb4.jpg" alt="保持穩定"
+                            style="height: 200px;">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="text-center">保持穩定</h2>
+                        <p class="card-text my-2">OIS (光學防手震) 讓相片變得清晰無手震。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 主打商品特色說明 card 結束 -->
+
+    <!-- 主打商品特效開始 -->
+    <section class="section-middle  overflow-hidden bg-theme102-color py-5">
+        <div class="row align-items-center py-5">
+            <div class="col-12 col-md-6 overflow-hidden">
+                <img class="w-75 ms-5 js-scaleSmall"
+                    src="./assets/images/index/motorola-edge-cam-overview-2.0-desktop-1.jpg" alt="盡情發揮智慧型手機的潛能">
+            </div>
+            <div class="col-12 col-md-6 px-4 py-4" data-aos="flip-up">
+                <h2 class="px-4 pb-3">盡情發揮智慧型手機的潛能</h2>
+                <p class="px-4">讓手機透過無線網路2 連線到電視或桌面顯示器等外部裝置，就能使用應用程式、進行視訊通話、玩遊戲和操作其他功能。</p>
+            </div>
+        </div>
+        <div class="row align-items-center py-5" style="background-color: #040a18;">
+            <div class="col-12 col-md-6 px-4" data-aos="fade-right">
+                <h2 class="px-4 pb-3">感受 5G 的差異
+                </h2>
+                <p class="px-4">感受 Qualcomm® Snapdragon™ 778G+ 5G 晶片組反應迅速的效能 – 同時體驗新一代的 5G4 和 Wi-Fi 6E5 速度。8GB RAM
+                    讓您享受更順暢、更快速的多工處理。</p>
+            </div>
+            <div class="col-12 col-md-6">
+                <iframe class="iframe-bg-image" src="https://player.vimeo.com/video/696898760?autoplay=1&mute=1"
+                    width="100%" height="400">
+                </iframe>
+            </div>
+        </div>
+        <div class="row align-items-center py-5">
+            <div class="col-12 col-md-6 overflow-hidden">
+                <img src="./assets/images/index/Motorola-edge-30-pdp-fullbleed-battery-d-skx5qwmz.jpg"
+                    alt="電力出眾 TurboPower™ 30 充電">
+            </div>
+            <div class="col-12 col-md-6 px-4" data-aos="fade-left">
+                <h2 class="px-4 pb-3">電力出眾 TurboPower™ 30 充電</h2>
+                <p class="px-4">不必擔心電池使用時間。感受 5G 的連線速度3，並體驗源源不絕的超長電池使用時間。只要用 TurboPower™ 30 充電6 幾分鐘就能獲得數小時的電力。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 系列機款開始 -->
+    <section class="section-middle-bottom">
+        <h2 class="text-center bg-theme102-color py-5">系列機款</h2>
+        <div class="container-fluid">
+            <div class="row bg-primary">
+                <div class="col-md-6 col-lg-4 banner-1 px-0">
+                    <a href="phone_edge.html" class="d-flex flex-column align-items-center justify-content-center hover-bg-light link-light" style="height: 400px;">
+                        <h4 class="py-3"><span class="underline">moto</span>rola edge 系列</h4>
+                        <h6 class="px-5">創新，永不停歇。用 EDGE 秀出真本領。
+                        </h6>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 banner-2 px-0">
+                    <a href="phone_razr.html" class="d-flex flex-column align-items-center justify-content-center hover-bg-light link-light" style="height: 400px;">
+                        <h4 class="py-3"><span class="underline">razr</span>無窮威力，絕巧收納</h4>
+                        <h6 class="px-5">革命性的彈性材質，讓絢麗的 6.2 吋 OLED 螢幕能夠完美收摺於掌上或口袋中。<br>
+                            精密工藝打造的金屬與玻璃為印象深植的經典設計注入了現代感。
+                        </h6>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 banner-3 px-0">
+                    <a href="phone_one.html" class="d-flex flex-column align-items-center justify-content-center hover-bg-light link-light" style="height: 400px;">
+                        <h4 class="py-3"><span class="underline">one</span>系列 低光源高解析度拍攝</h4>
+                        <h6 class="px-5">隨時捕捉最微小的細節
+                        </h6>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 banner-4 px-0">
+                    <a href="phone_moto_e.html" class="d-flex flex-column align-items-center justify-content-center hover-bg-light link-light" style="height: 400px;">
+                        <h4 class="py-3"><span class="underline">e系列</span>擴大您的想像力</h4>
+                        <h6 class="px-5">隆重推出全新
+                        </h6>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 banner-5 px-0">
+                    <a href="phone_moto_g.html" class="d-flex flex-column align-items-center justify-content-center hover-bg-light link-light" style="height: 400px;">
+                        <h4 class="py-3"><span class="underline">g系列</span>外型搶眼，音效驚艷</h4>
+                        <h6 class="px-5">moto g 系列持續推陳出新，每次亮相都帶來最新、最棒的智慧型手機技術，驚艷眾人。
+                        </h6>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 banner-6 px-0">
+                    <a href="phone_all.html" class="d-flex flex-column align-items-center justify-content-center hover-bg-light link-light" style="height: 400px;">
+                        <h4 class="py-3"><span class="underline">全系列</span>智慧型手機</h4>
+                        <h6 class="px-5">你想要功能樣式的手機，都在這裡
+                        </h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 訂閱開始 -->
+    <section class="section-bottom text-light">
+        <div class="index-banner d-flex flex-column justify-content-center align-items-center">
+            <h2 class="py-3">掌握即時 精彩不漏接</h2>
+            <div class="w-50 py-3 text-center">
+                <input type="email" class="form-control text-center" placeholder="Email"
+                    style="background-color: transparent;">
+                <button type="button" class="btn btn-light m-5">訂閱</button>
+            </div>
+        </div>
+    </section>
+    <!-- 訂閱結束 -->
+</div>
+
+    <!-- footer開始 -->
+    <footer class="footer bg-dark text-light">
+      <div class="container text-center d-md-flex justify-content-between align-items-center py-2">
+        <a href="index.html">
+          <img width="136px" src="./assets/images/Motorola_Logo_White.png" alt="Motorola">
+        </a>
+        <nav>
+          <ul class="d-md-flex flex-wrap text-center">
+            <li><a class="p-3" href="phone_all.html">手機</a></li>
+            <li><a class="p-3" href="store.html">服務據點</a></li>
+            <li><a class="p-3" href="support.html">支援服務</a></li>
+            <li><a class="p-3" href="member.html">會員</a></li>
+          </ul>
+        </nav>
+
+      </div>
+      <hr>
+      <p class="text-center py-2">本網站僅供個人作品使用，不提供商業用途</p>
+    </footer>
+    <!-- footer結束 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Motorola手機 | 台灣</title>
+  <link rel="shortcut icon" href="./assets/images/favicon.ico">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <!-- header開始 -->
+  <header class="header fixed-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a href="index.html"><img width="136px" class="logo" src="./assets/images/Motorola_Logo_White.png" alt="Motorola"
+          title="Motorola">
+        <h1 class="visual-hidden">motorola</h1>
+      </a>
+      <nav class="text-light d-flex">
+        <ul class="d-none d-lg-flex fs-5">
+          <li class="list-parent hover-line"><a class="hover-underline px-2 py-3" href="#">手機</a>
+            <ul class="list-child">
+              <li class="text-center"><a href="phone_edge.html" data-series='edge'>
+                  <img src="./assets/images/nav/edge.webp" alt="motorola edge 系列" data-series='edge'>
+                  <hr>
+                  <p data-series='edge'>motorola edge 系列</p>
+                </a></li>
+              <li class="text-center"><a href="phone_razr.html" data-series='razr'>
+                  <img src="./assets/images/nav/razr.webp" alt="razr" data-series='razr'>
+                  <hr>
+                  <p data-series='razr'>razr</p>
+                </a></li>
+              <li class="text-center"><a href="phone_one.html" data-series='one'>
+                  <img src="./assets/images/nav/one.webp" alt="motorola one 系列" data-series='one'>
+                  <hr>
+                  <p data-series='one'>motorola one 系列</p>
+                </a></li>
+              <li class="text-center"><a href="phone_moto_e.html" data-series='e'>
+                  <img src="./assets/images/nav/e.webp" alt="moto e 系列" data-series='e'>
+                  <hr>
+                  <p data-series='e'>moto e 系列</p>
+                </a></li>
+              <li class="text-center"><a href="phone_moto_g.html" data-series='g'>
+                  <img src="./assets/images/nav/g.webp" alt="moto g 系列" data-series='g'>
+                  <hr>
+                  <p data-series='g'>moto g 系列</p>
+                </a></li>
+              <li class="text-center"><a href="phone_all.html" data-series='all'>
+                  <img src="./assets/images/nav/all.webp" data-series='all'>
+                  <hr>
+                  <p data-series='all'>全部機型</p>
+                </a></li>
+            </ul>
+          </li>
+          <li class="list-parent hover-line"><a class="hover-underline px-2 py-3" href="store.html">服務據點</a>
+          </li>
+          <li class="list-parent hover-line"><a class="hover-underline px-2 py-3" href="support.html">支援服務</a>
+          </li>
+          <li class="list-parent hover-line"><a class="hover-underline px-2 py-3" href="./member.html"><span class="material-symbols-outlined">
+            person_add
+            </span>會員</a>
+          </li>
+        </ul>
+        <input id="nav-toggle" class="ham-toggle d-none" type="checkbox">
+        <label for="nav-toggle" class="ham-menu">
+          <div class="ham-frame">
+            <div class="ham-bar ham-bar--top"></div>
+            <div class="ham-bar ham-bar--middle"></div>
+            <div class="ham-bar ham-bar--bottom"></div>
+          </div>
+        </label>
+        <!-- 側邊欄開始 -->
+        <div class="offcanvas-right d-lg-none offcanvas-overflow-style">
+          <ul class="fs-5">
+            <li class="offcanvas-hover-line" data-series='edge'>
+              <a class="hover-underline offcanvas-parent  px-4 py-3" href="#" data-series='edge'>
+                <span class="material-symbols-outlined phone_android" data-series='edge'>
+                  phone_android
+                </span>&nbsp;手機
+                <span class="material-symbols-outlined chevron_right" data-series='edge'>
+                  chevron_right
+                </span>
+              </a>
+              <ul class="offcanvas-right-child d-none">
+                <li><a class="p-1" style="text-indent: 2rem;" href="phone_edge.html">motorola edge 系列</a></li>
+                <li><a class="p-1" style="text-indent: 2rem;" href="phone_one.html">motorola one 系列</a></li>
+                <li><a class="p-1" style="text-indent: 2rem;" href="phone_moto_e.html">moto e 系列</a></li>
+                <li><a class="p-1" style="text-indent: 2rem;" href="phone_moto_g.html">moto g 系列</a></li>
+                <li><a class="p-1" style="text-indent: 2rem;" href="phone_all.html">全部機型</a></li>
+              </ul>
+            </li>
+            <li class="offcanvas-hover-line"><a class="hover-underline px-4 py-3" href="store.html"><span class="material-symbols-outlined">
+              storefront
+              </span>&nbsp;服務據點</a></li>
+            <li class="offcanvas-hover-line"><a class="hover-underline px-4 py-3" href="support.html"><span class="material-symbols-outlined">
+              headphones
+              </span>&nbsp;支援服務</a></li>
+            <li class="offcanvas-hover-line"><a class="hover-underline px-4 py-3" href="member.html"><span class="material-symbols-outlined">
+              person
+              </span>&nbsp;會員</a></li>
+          </ul>
+        </div>
+        <!-- 側邊欄結束 -->
+      </nav>
+    </div>
+  </header>
+  <!-- header結束 -->
+
+  <div class="phone phone_edge text-light">
+    <!-- Hero Image 開始  -->
+    <section class="hero d-flex flex-column justify-content-center">
+        <div class="container text-end">
+            <h2 class="p-3" data-aos="flip-left">令人難以置信的 5G 速度</h2>
+                <h5 class="p-3" data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom" data-aos-duration="2000">
+                    <p class="py-1">透過令人難以置信的 5G 速度，實現更多以往不可能達成的任務。</p>
+                    <p class="py-1">下載您最愛的節目，只要幾秒就能完成⁷。</p>
+                    <p class="py-1">串流速度之快，幾乎沒有緩衝。</p>
+                    <p class="py-1">視訊交談不再延遲，就像親臨現場一樣。</p>
+                </h5>
+        </div>
+    </section>
+    <!-- Hero Image 結束  -->
+
+    <!-- 系列機款分類選單開始 -->
+    <section class="section-top bg-theme101-color">
+        <div class="swiper renderSwiper">
+            <ul class="swiper-wrapper ps-3 py-3 mx-auto gap-2">
+                <li class="swiper-slide" style="width: 150px;">
+                    <a class="text-center" href="#" data-series='edge'>
+                        <img src="./assets/images/phone/all/edge.webp" alt="motorola edge 系列" style="height: 150px;" data-series='edge'>
+                        <p data-series='edge'>motorola edge 系列</p>
+                    </a>
+                </li>
+                <li class="swiper-slide" style="width: 150px;">
+                    <a class="text-center" href="#" data-series='razr'>
+                        <img src="./assets/images/phone/all/zazr.webp" alt="razr" style="height: 150px;" data-series='razr'>
+                        <p data-series='razr'>razr</p>
+                    </a>
+                </li>
+                <li class="swiper-slide" style="width: 150px;">
+                    <a class="text-center" href="#" data-series='one'>
+                        <img src="./assets/images/phone/all/one.webp" alt="motorola one 系列" style="height: 150px;" data-series='one'>
+                        <p data-series='one'>motorola one 系列</p>
+                    </a>
+                </li>
+                <li class="swiper-slide" style="width: 150px;">
+                    <a class="text-center" href="#" data-series='e'>
+                        <img src="./assets/images/phone/all/e.webp" alt="moto e 系列" style="height: 150px;" data-series='e'>
+                        <p data-series='e'>moto e 系列</p>
+                    </a>
+                </li>
+                <li class="swiper-slide" style="width: 150px;">
+                    <a class="text-center" href="#" data-series='g'>
+                        <img src="./assets/images/phone/all/g.webp" alt="moto g 系列" style="height: 150px;" data-series='g'>
+                        <p data-series='g'>moto g 系列</p>
+                    </a>
+                </li>
+                <li class="swiper-slide" style="width: 250px; padding-right: 100px;">
+                    <a class="text-center" href="#" data-series='all'>
+                        <img src="./assets/images/phone/all/all.webp" alt="全部機型" style="height: 150px;" data-series='all'>
+                        <p data-series='all'>全部機型</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 系列機款分類選單結束 -->
+
+    <!-- 機型畫面開始 -->
+    <section class="section-bottom bg-theme101-color text-dark">
+        <div class="container d-flex py-5">
+            <div class="allPhone card-container">
+            </div>
+        </div>
+    </section>
+    <!-- 機型畫面結束 -->
+</div>
+
+    <!-- footer開始 -->
+    <footer class="footer bg-dark text-light">
+      <div class="container text-center d-md-flex justify-content-between align-items-center py-2">
+        <a href="index.html">
+          <img width="136px" src="./assets/images/Motorola_Logo_White.png" alt="Motorola">
+        </a>
+        <nav>
+          <ul class="d-md-flex flex-wrap text-center">
+            <li><a class="p-3" href="phone_all.html">手機</a></li>
+            <li><a class="p-3" href="store.html">服務據點</a></li>
+            <li><a class="p-3" href="support.html">支援服務</a></li>
+            <li><a class="p-3" href="member.html">會員</a></li>
+          </ul>
+        </nav>
+
+      </div>
+      <hr>
+      <p class="text-center py-2">本網站僅供個人作品使用，不提供商業用途</p>
+    </footer>
+    <!-- footer結束 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
