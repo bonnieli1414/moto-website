@@ -40,4 +40,10 @@
             @include bg-fixd;
         }
     }
+    
+    .card-body {
+        // flex-grow、flex-shrink 和 flex-basis 三個子屬性，
+        // 初始值為 0 1 auto，即不會延展（flex-grow: 0）、縮小（flex-shrink: 1），初始寬度為元素內容的大小（flex-basis: auto）。
+        flex: 0 1 auto;
+    }
 }
