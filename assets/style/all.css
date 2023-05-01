@@ -9925,6 +9925,18 @@ body {
 .px-0 {
   padding: 0px; }
 
+.ps-56 {
+  padding-left: 3.5rem; }
+
+.pe-56 {
+  padding-right: 3.5rem; }
+
+.py-lg-4 {
+  padding: 4px 0px; }
+  @media screen and (max-width: 991.5px) {
+    .py-lg-4 {
+      padding: 0px; } }
+
 .underline {
   border-bottom: solid 2px #397ff9;
   padding-bottom: 1px; }
@@ -10163,6 +10175,11 @@ footer img:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; }
+
+.index .card-body {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto; }
 
 .phone .hero {
   height: 500px;
