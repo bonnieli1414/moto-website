@@ -20,6 +20,18 @@
 .hover-bg-light {
     @include hover-bg-light;
 }
+.w-10 {
+    width: 10%;
+}
+.w-20 {
+    width: 20%;
+} 
+.w-30 {
+    width: 30%;
+}
+.w-35 {
+    width: 35%;
+} 
 .mb--7 {
     margin-bottom: -7px;
 }
