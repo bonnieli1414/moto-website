@@ -134,7 +134,7 @@ function filterPhoneDataClick() {
 
 // 回到頂端圖標
 function showArrowUp() {
-    $(window).scrollTop() > 0 ? $('.arrowUp').css('display', 'block') : $('.arrowUp').css('display', 'none')
+    $(window).scrollTop() > 0 ? $('.arrow-up').css('display', 'block') : $('.arrow-up').css('display', 'none')
 }
 function upTop() {
     $('html, body').scrollTop(0);
@@ -165,5 +165,5 @@ $(document).ready(function () {
     clickOffcanvas()
     clickHamMenu()
     // 點擊圖標回到頁面上方
-    $('.arrowUp').on('click', upTop)
+    $('.arrow-up').on('click', upTop)
 });
