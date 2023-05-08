@@ -1,4 +1,6 @@
 .index {
+    position: relative;
+
     .section-top {
         .card {
             @include hover-imgChangeBig;
@@ -10,22 +12,27 @@
             height: 400px;
             @include banner("../../assets/images/index/banner01.webp");
         }
+
         .banner-2 {
             height: 400px;
             @include banner("../../assets/images/index/banner02.webp");
         }
+
         .banner-3 {
             height: 400px;
             @include banner("../../assets/images/index/banner03.webp");
         }
+
         .banner-4 {
             height: 400px;
             @include banner("../../assets/images/index/banner04.webp");
         }
+
         .banner-5 {
             height: 400px;
             @include banner("../../assets/images/index/banner05.webp");
         }
+
         .banner-6 {
             height: 400px;
             @include banner("../../assets/images/index/banner06.webp");
@@ -40,7 +47,7 @@
             @include bg-fixd;
         }
     }
-    
+
     .card-body {
         // flex-grow、flex-shrink 和 flex-basis 三個子屬性，
         // 初始值為 0 1 auto，即不會延展（flex-grow: 0）、縮小（flex-shrink: 1），初始寬度為元素內容的大小（flex-basis: auto）。

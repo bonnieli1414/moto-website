@@ -4,7 +4,20 @@
     'wght' 400,
     'GRAD' 0,
     'opsz' 48
-  }
+}
+
+.arrowUp {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    position: fixed;
+    right: 2%;
+    bottom: 50px;
+    z-index: 999;
+    background: url("../../assets/images/arrow_circle_up_FILL0_wght400_GRAD0_opsz48.png") 50% no-repeat;
+    display: none;
+}
+
 .bg-theme101-color {
     background-color: $theme101-color;
 }

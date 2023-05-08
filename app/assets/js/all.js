@@ -132,6 +132,14 @@ function filterPhoneDataClick() {
     })
 }
 
+// 回到頂端圖標
+function showArrowUp() {
+    $(window).scrollTop() > 0 ? $('.arrowUp').css('display', 'block') : $('.arrowUp').css('display', 'none')
+}
+function upTop() {
+    $('html, body').scrollTop(0);
+}
+
 // 滾輪條事件
 $(window).scroll(() => {
 
@@ -147,9 +155,15 @@ $(window).scroll(() => {
     upPosition()
     scaleSmall()
     scaleBig()
+
+    // 回到頂端圖標的顯示與否
+    $(window).on('scroll', showArrowUp)
+
 });
 
 $(document).ready(function () {
     clickOffcanvas()
     clickHamMenu()
+    // 點擊圖標回到頁面上方
+    $('.arrowUp').on('click', upTop)
 });

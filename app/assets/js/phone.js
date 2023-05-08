@@ -583,6 +583,7 @@ function filterProductToHTML(e, data, dataset) {
             str += `
             <div id="products" class="product bg-theme101-color text-light" style="padding: 140px 0px;">
     <main id="top">
+    <div class="arrowUp bg-light"></div>
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-7"><img src="${item.picture}" alt=""></div>
