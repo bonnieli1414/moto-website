@@ -579,7 +579,6 @@ function filterProductToHTML(e, data, dataset) {
     let str = "";
     data.forEach(item => {
         if (dataset === item.name) {
-            console.log(dataset, item.name, dataset === item.name)
             str += `
             <div id="products" class="product bg-theme101-color text-light" style="padding: 140px 0px;">
             <!-- backToTop圖標 -->
@@ -645,7 +644,6 @@ function filterProductToHTML(e, data, dataset) {
 
 // 回到頁面頂端
 function backTotop() {
-    console.log(Number($(window).scrollTop()) > 0)
     Number($(window).scrollTop()) > 0 ? $('html, body').scrollTop(0) : "";
 }
 

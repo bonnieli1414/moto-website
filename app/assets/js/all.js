@@ -137,7 +137,6 @@ function showArrowUp() {
     $(window).scrollTop() > 0 ? $('.arrowUp').css('display', 'block') : $('.arrowUp').css('display', 'none')
 }
 function upTop() {
-    console.log("點擊")
     $('html, body').scrollTop(0);
 }
 
