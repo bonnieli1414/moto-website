@@ -9900,6 +9900,17 @@ body {
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48; }
 
+.arrowUp {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  position: fixed;
+  right: 2%;
+  bottom: 50px;
+  z-index: 999;
+  background: url("../../assets/images/arrow_circle_up_FILL0_wght400_GRAD0_opsz48.png") 50% no-repeat;
+  display: none; }
+
 .bg-theme101-color {
   background-color: #0B1E32; }
 
@@ -10122,76 +10133,68 @@ header {
 footer img:hover {
   opacity: 0.6; }
 
-.index .section-top .card .card-frame {
-  overflow: hidden; }
-
-.index .section-top .card .card-img-top {
-  -webkit-transition: -webkit-transform ease-out 0.5s;
-  transition: -webkit-transform ease-out 0.5s;
-  -o-transition: transform ease-out 0.5s;
-  transition: transform ease-out 0.5s;
-  transition: transform ease-out 0.5s, -webkit-transform ease-out 0.5s; }
-
-.index .section-top .card .card-img-top:hover {
-  -webkit-transform: scale(1.2);
-      -ms-transform: scale(1.2);
-          transform: scale(1.2); }
-
-.index .section-middle-bottom .banner-1 {
-  height: 400px;
-  background-image: url("../../assets/images/index/banner01.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
-
-.index .section-middle-bottom .banner-2 {
-  height: 400px;
-  background-image: url("../../assets/images/index/banner02.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
-
-.index .section-middle-bottom .banner-3 {
-  height: 400px;
-  background-image: url("../../assets/images/index/banner03.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
-
-.index .section-middle-bottom .banner-4 {
-  height: 400px;
-  background-image: url("../../assets/images/index/banner04.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
-
-.index .section-middle-bottom .banner-5 {
-  height: 400px;
-  background-image: url("../../assets/images/index/banner05.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
-
-.index .section-middle-bottom .banner-6 {
-  height: 400px;
-  background-image: url("../../assets/images/index/banner06.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
-
-.index .section-bottom .index-banner {
-  width: 100%;
-  height: 600px;
-  background-image: url("../../assets/images/index/Motorola-edge-30-pdp-Design-Water-Protection-Desktop-7mlhjiik.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; }
-
-.index .card-body {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto; }
+.index {
+  position: relative; }
+  .index .section-top .card .card-frame {
+    overflow: hidden; }
+  .index .section-top .card .card-img-top {
+    -webkit-transition: -webkit-transform ease-out 0.5s;
+    transition: -webkit-transform ease-out 0.5s;
+    -o-transition: transform ease-out 0.5s;
+    transition: transform ease-out 0.5s;
+    transition: transform ease-out 0.5s, -webkit-transform ease-out 0.5s; }
+  .index .section-top .card .card-img-top:hover {
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2); }
+  .index .section-middle-bottom .banner-1 {
+    height: 400px;
+    background-image: url("../../assets/images/index/banner01.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .index .section-middle-bottom .banner-2 {
+    height: 400px;
+    background-image: url("../../assets/images/index/banner02.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .index .section-middle-bottom .banner-3 {
+    height: 400px;
+    background-image: url("../../assets/images/index/banner03.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .index .section-middle-bottom .banner-4 {
+    height: 400px;
+    background-image: url("../../assets/images/index/banner04.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .index .section-middle-bottom .banner-5 {
+    height: 400px;
+    background-image: url("../../assets/images/index/banner05.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .index .section-middle-bottom .banner-6 {
+    height: 400px;
+    background-image: url("../../assets/images/index/banner06.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .index .section-bottom .index-banner {
+    width: 100%;
+    height: 600px;
+    background-image: url("../../assets/images/index/Motorola-edge-30-pdp-Design-Water-Protection-Desktop-7mlhjiik.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
+  .index .card-body {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto; }
 
 .phone .hero {
   height: 500px;

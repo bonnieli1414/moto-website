@@ -168,6 +168,15 @@ function filterPhoneDataClick() {
         break;
     }
   });
+} // 回到頂端圖標
+
+
+function showArrowUp() {
+  $(window).scrollTop() > 0 ? $('.arrowUp').css('display', 'block') : $('.arrowUp').css('display', 'none');
+}
+
+function upTop() {
+  $('html, body').scrollTop(0);
 } // 滾輪條事件
 
 
@@ -182,11 +191,15 @@ $(window).scroll(function () {
   fadeIn();
   upPosition();
   scaleSmall();
-  scaleBig();
+  scaleBig(); // 回到頂端圖標的顯示與否
+
+  $(window).on('scroll', showArrowUp);
 });
 $(document).ready(function () {
   clickOffcanvas();
-  clickHamMenu();
+  clickHamMenu(); // 點擊圖標回到頁面上方
+
+  $('.arrowUp').on('click', upTop);
 });
 "use strict"; // 備份檔，以防止ajax失敗仍可顯示商品至畫面
 
@@ -643,7 +656,10 @@ var PhoneData = {
 
       _this.productToHTML(phone_moto_e, '.phone_moto_e .allPhone');
 
-      _this.productToHTML(phone_moto_g, '.phone_moto_g .allPhone');
+      _this.productToHTML(phone_moto_g, '.phone_moto_g .allPhone'); // filterProductToHTML(this.data)
+
+
+      clickBuy(_this.data);
     }).fail(function (jqXHR, errorMsg) {
       _this.data = phoneBackupData;
       console.log('錯誤', jqXHR.responseJSON, errorMsg);
@@ -682,7 +698,10 @@ var PhoneData = {
 
       _this.productToHTML(phone_moto_e, '.phone_moto_e .allPhone');
 
-      _this.productToHTML(phone_moto_g, '.phone_moto_g .allPhone');
+      _this.productToHTML(phone_moto_g, '.phone_moto_g .allPhone'); // filterProductToHTML(this.data)
+
+
+      clickBuy(_this.data);
     });
   }
 }; // 手機機型初始化
@@ -702,10 +721,10 @@ PhoneData.productToHTML = function (data, ouptputEl) {
   var str = '';
   data.forEach(function (item) {
     var text = item.description.length > 32 ? item.description.substr(0, 32) + ' ...' : item.description;
-    str += "<div class=\"card\">\n                <div class=\"card-frame\" style=\"max-width: 400px;\">\n                    <a href=\"#\"><img class=\"card-img-top\"\n                            src=\"".concat(item.picture, "\"\n                            alt=\"").concat(item.name, "\"></a>\n                </div>\n                <div class=\"card-body\">\n                    <h3 class=\"text-center\" style=\"height: 65px;\">").concat(item.name, "</h3>\n                    <p class=\"card-text my-3\" style=\"height: 65px;\">").concat(text, "</p>\n                    <a href=\"#\" class=\"btn btn-primary w-100 py-2\">\u8CFC\u8CB7</a>\n                </div>\n            </div>");
+    str += "<div class=\"card\">\n                <div class=\"card-frame\" style=\"max-width: 400px;\">\n                    <a href=\"#\"><img class=\"card-img-top\"\n                            src=\"".concat(item.picture, "\"\n                            alt=\"").concat(item.name, "\"></a>\n                </div>\n                <div class=\"card-body\">\n                    <h3 class=\"text-center\" style=\"height: 65px;\">").concat(item.name, "</h3>\n                    <p class=\"card-text my-3\" style=\"height: 65px;\">").concat(text, "</p>\n                    <a href=\"../../products.html\" class=\"btn btn-primary w-100 py-2\" data-btn=\"").concat(item.name, "\">\u8CFC\u8CB7</a>\n                </div>\n            </div>");
   });
   $(ouptputEl).html(str);
-}; // 手機業面的click事件，從PhoneData物件篩選不同機型
+}; // 手機頁面的click事件，從PhoneData物件篩選不同機型
 
 
 PhoneData.filterPhoneDataClick = function (el) {
@@ -769,7 +788,39 @@ PhoneData.filterPhoneDataClick = function (el) {
         break;
     }
   });
-};
+}; // 點選購買按鈕事件
+
+
+function clickBuy(data) {
+  $('.allPhone .card-body .btn').on('click', function (e) {
+    getDataset(e, data);
+  });
+} // 取得dataset
+
+
+function getDataset(e, data) {
+  e.preventDefault();
+  filterProductToHTML(e, data, e.target.dataset.btn);
+  backTotop();
+} // 將dataset資料比對後，選染在畫面上
+
+
+function filterProductToHTML(e, data, dataset) {
+  var str = "";
+  data.forEach(function (item) {
+    if (dataset === item.name) {
+      console.log(dataset, item.name, dataset === item.name);
+      str += "\n            <div id=\"products\" class=\"product bg-theme101-color text-light\" style=\"padding: 140px 0px;\">\n    <main id=\"top\">\n    <div class=\"arrowUp bg-light\"></div>\n        <div class=\"container\">\n            <div class=\"row\">\n                <div class=\"col-12 col-lg-7\"><img src=\"".concat(item.picture, "\" alt=\"\"></div>\n                <ul class=\"col-10 col-lg-5\">\n                    <li>\n                        <h3 class=\"pb-3\" style=\"padding-top: 4rem;\">").concat(item.name, "</h3>\n                    </li>\n                    <li>\n                        <p class=\"py-2\">").concat(item.description, "</p>\n                    </li>\n                    <li>\n                        <p class=\"py-2\">\u539F\u50F9\uFF1A").concat(item.price, "\u5143</p>\n                    </li>\n                    <li>\n                        <p class=\"py-2\">\u512A\u60E0\u50F9\uFF1A").concat(item.sale, "</p>\n                    </li>\n                    <hr>\n                    <li class=\"py-5\">\n                        <input class=\"py-1 my-2\" type=\"number\" class=\"form-control shadow-none\" value=\"1\">\n                        <input class=\"btn btn-dark mx-2\" type=\"button\" value=\"\u52A0\u5165\u8CFC\u7269\u8ECA\">\n                    </li>\n                </ul>\n            </div>\n            <div class=\"row\">\n                <nav>\n                    <div class=\"nav nav-tabs\" id=\"nav-tab\" role=\"tablist\">\n                        <button class=\"nav-link active\" id=\"nav-detail-tab\" data-bs-toggle=\"tab\"\n                            data-bs-target=\"#nav-detail\" type=\"button\" role=\"tab\" aria-controls=\"nav-detail\"\n                            aria-selected=\"true\">\u7522\u54C1\u7D30\u7BC0</button>\n                    </div>\n                </nav>\n                <div class=\"tab-content py-2\" id=\"nav-tabContent\">\n                    <div class=\"tab-pane fade show active\" id=\"nav-detail\" role=\"tabpanel\"\n                        aria-labelledby=\"nav-detail-tab\">\n                        Lorem ipsum dolor sit amet, consec do eiusmod tincididunt ut labore et dolore magna aliqua. Ut\n                        enim ad minim veniaLo ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\n                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation\n                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit\n                        in voluptate velit esse cillum dolore eu fugiat nulla paExcepteur sint occaecat cupidatat non\n                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. iatis unde omnis iste\n                        natus error sit voluptatem accusantium\n\n                        Lorem ipsum dolor sit amet, consec do eiusmod tincididunt ut labore et dolore magna aliqua. Ut\n                        enim ad minim veniaLo ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor\n                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation\n                        ullamco.\n                    </div>\n                </div>\n            </div>\n        </div>\n    </main>\n</div>\n    ");
+    }
+  });
+  $('.phone').html(str);
+} // 回到頁面頂端
+
+
+function backTotop() {
+  console.log(Number($(window).scrollTop()) > 0);
+  Number($(window).scrollTop()) > 0 ? $('html, body').scrollTop(0) : "";
+}
 
 PhoneData.stateInit();
 "use strict"; // 門市資料物件
