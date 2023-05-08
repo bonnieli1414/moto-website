@@ -641,6 +641,7 @@ function filterProductToHTML(e, data, dataset) {
     $('.phone').html(str);
 }
 
+// 回到頁面頂端
 function backTotop() {
     console.log(Number($(window).scrollTop()) > 0)
     Number($(window).scrollTop()) > 0 ? $('html, body').scrollTop(0) : "";
