@@ -582,8 +582,9 @@ function filterProductToHTML(e, data, dataset) {
             console.log(dataset, item.name, dataset === item.name)
             str += `
             <div id="products" class="product bg-theme101-color text-light" style="padding: 140px 0px;">
-    <main id="top">
+            <!-- backToTop圖標 -->
     <div class="arrowUp bg-light"></div>
+    <main id="top">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-7"><img src="${item.picture}" alt=""></div>
@@ -601,9 +602,9 @@ function filterProductToHTML(e, data, dataset) {
                         <p class="py-2">優惠價：${item.sale}</p>
                     </li>
                     <hr>
-                    <li class="py-5">
+                    <li>
                         <input class="py-1 my-2" type="number" class="form-control shadow-none" value="1">
-                        <input class="btn btn-dark mx-2" type="button" value="加入購物車">
+                        <input class="btn btn-dark mx-2 my-5" type="button" value="加入購物車">
                     </li>
                 </ul>
             </div>
