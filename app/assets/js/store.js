@@ -338,6 +338,7 @@ for (const [key, value] of Object.entries(StoreData["經銷門市"])) {
     objData.key.push(key)
     objData.value.push(value)
 }
+
 // new出phoneStore實體物件
 const phoneStore = new StoreTemplate($('#areaSelect'), $('#areaData'), objData.key, objData.value)
 phoneStore.selectElToHTML()

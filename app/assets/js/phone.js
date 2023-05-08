@@ -446,14 +446,14 @@ const PhoneData = {
         })
             .done((res) => {
                 this.data = res.message
-                console.log('資料取得成功',this.data)
+                console.log('資料取得成功', this.data)
 
                 // 篩選資料
                 const phone_razr = this.data.filter(item => item.name.includes('razr'))
                 const phone_edge = this.data.filter(item => item.name.includes('edge'))
-                const phone_one = this.data.filter(item=>item.name.includes('motorola one'))
-                const phone_moto_e = this.data.filter(item=>item.name.includes('moto e'))
-                const phone_moto_g = this.data.filter(item=>item.name.includes('moto g'))
+                const phone_one = this.data.filter(item => item.name.includes('motorola one'))
+                const phone_moto_e = this.data.filter(item => item.name.includes('moto e'))
+                const phone_moto_g = this.data.filter(item => item.name.includes('moto g'))
 
                 this.filterPhoneDataClick('.phone .section-top')
 
@@ -464,6 +464,8 @@ const PhoneData = {
                 this.productToHTML(phone_one, '.phone_one .allPhone')
                 this.productToHTML(phone_moto_e, '.phone_moto_e .allPhone')
                 this.productToHTML(phone_moto_g, '.phone_moto_g .allPhone')
+                // filterProductToHTML(this.data)
+                clickBuy(this.data)
             })
             .fail((jqXHR, errorMsg) => {
                 this.data = phoneBackupData
@@ -473,9 +475,9 @@ const PhoneData = {
                 // 篩選資料
                 const phone_razr = this.data.filter(item => item.name.includes('razr'))
                 const phone_edge = this.data.filter(item => item.name.includes('edge'))
-                const phone_one = this.data.filter(item=>item.name.includes('motorola one'))
-                const phone_moto_e = this.data.filter(item=>item.name.includes('moto e'))
-                const phone_moto_g = this.data.filter(item=>item.name.includes('moto g'))
+                const phone_one = this.data.filter(item => item.name.includes('motorola one'))
+                const phone_moto_e = this.data.filter(item => item.name.includes('moto e'))
+                const phone_moto_g = this.data.filter(item => item.name.includes('moto g'))
 
                 this.filterPhoneDataClick('.phone .section-top')
 
@@ -486,6 +488,8 @@ const PhoneData = {
                 this.productToHTML(phone_one, '.phone_one .allPhone')
                 this.productToHTML(phone_moto_e, '.phone_moto_e .allPhone')
                 this.productToHTML(phone_moto_g, '.phone_moto_g .allPhone')
+                // filterProductToHTML(this.data)
+                clickBuy(this.data)
             })
     }
 }
@@ -515,14 +519,14 @@ PhoneData.productToHTML = function (data, ouptputEl) {
                 <div class="card-body">
                     <h3 class="text-center" style="height: 65px;">${item.name}</h3>
                     <p class="card-text my-3" style="height: 65px;">${text}</p>
-                    <a href="#" class="btn btn-primary w-100 py-2">購買</a>
+                    <a href="../../products.html" class="btn btn-primary w-100 py-2" data-btn="${item.name}">購買</a>
                 </div>
             </div>`
     });
     $(ouptputEl).html(str)
 }
 
-// 手機業面的click事件，從PhoneData物件篩選不同機型
+// 手機頁面的click事件，從PhoneData物件篩選不同機型
 PhoneData.filterPhoneDataClick = function (el) {
     $(el).on('click', e => {
         e.preventDefault()
@@ -554,6 +558,92 @@ PhoneData.filterPhoneDataClick = function (el) {
                 break;
         }
     })
+}
+
+// 點選購買按鈕事件
+function clickBuy(data) {
+    $('.allPhone .card-body .btn').on('click', function (e) {
+        getDataset(e, data)
+    })
+}
+
+// 取得dataset
+function getDataset(e, data) {
+    e.preventDefault();
+    filterProductToHTML(e, data, e.target.dataset.btn)
+    backTotop();
+}
+
+// 將dataset資料比對後，選染在畫面上
+function filterProductToHTML(e, data, dataset) {
+    let str = "";
+    data.forEach(item => {
+        if (dataset === item.name) {
+            console.log(dataset, item.name, dataset === item.name)
+            str += `
+            <div id="products" class="product bg-theme101-color text-light" style="padding: 140px 0px;">
+    <main id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-7"><img src="${item.picture}" alt=""></div>
+                <ul class="col-10 col-lg-5">
+                    <li>
+                        <h3 class="pb-3" style="padding-top: 4rem;">${item.name}</h3>
+                    </li>
+                    <li>
+                        <p class="py-2">${item.description}</p>
+                    </li>
+                    <li>
+                        <p class="py-2">原價：${item.price}元</p>
+                    </li>
+                    <li>
+                        <p class="py-2">優惠價：${item.sale}</p>
+                    </li>
+                    <hr>
+                    <li class="py-5">
+                        <input class="py-1 my-2" type="number" class="form-control shadow-none" value="1">
+                        <input class="btn btn-dark mx-2" type="button" value="加入購物車">
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-detail-tab" data-bs-toggle="tab"
+                            data-bs-target="#nav-detail" type="button" role="tab" aria-controls="nav-detail"
+                            aria-selected="true">產品細節</button>
+                    </div>
+                </nav>
+                <div class="tab-content py-2" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-detail" role="tabpanel"
+                        aria-labelledby="nav-detail-tab">
+                        Lorem ipsum dolor sit amet, consec do eiusmod tincididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniaLo ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat nulla paExcepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum. iatis unde omnis iste
+                        natus error sit voluptatem accusantium
+
+                        Lorem ipsum dolor sit amet, consec do eiusmod tincididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniaLo ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+    `
+        }
+    });
+    $('.phone').html(str);
+}
+
+function backTotop() {
+    console.log(Number($(window).scrollTop()) > 0)
+    Number($(window).scrollTop()) > 0 ? $('html, body').scrollTop(0) : "";
 }
 
 PhoneData.stateInit()
